@@ -14,7 +14,7 @@
     
     
 
-    <button onclick="confirmation()">Confirm Personal data reveal</button>
+    <button onclick="confirmation()">Confirm Personal data reveal (info is already embedded in the code)</button>
     
     <script>
         //1.)
@@ -27,8 +27,8 @@
         var lbs = weight*2.20462;
 
         //2.)
-        var firstname=prompt("Enter your first name (no spaces!): ");
-        var lastname=prompt("Enter your last name (no spaces!): ");
+        var firstname=prompt("Enter your first name: ");
+        var lastname=prompt("Enter your last name: ");
         var birthyear=prompt("Enter your birth year: ");
 
         birthyear=2024-birthyear;
@@ -41,7 +41,7 @@
             if (confirm("Do you agree to share your personal information with the site? ")) {
                 txt=alert(
                     "Name: " + nickname + nextline + 
-                    "Height: " + Math.trunc(feet) + "'" + inches + "" + nextline +
+                    "Height: " + Math.trunc(feet) + "'" + inches + '"' + nextline +
                     "Weight: " + lbs + " lbs");
             } else {
                 txt=alert("User does not wish to share hisher information")
