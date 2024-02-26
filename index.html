@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="firstname"></p>
+    <p id="lastname"></p>
+    <p id="birthyear"></p>
+    <p id="message"></p>
+    
+    
+
+    <button onclick="confirmation()">Confirm Personal data reveal</button>
+    
+    <script>
+        //1.)
+        var nickname="Alan";
+        var height=68;
+        var weight=65;
+        var nextline="\n"
+        var feet = height/12;
+        let inches = height%12;
+        var lbs = weight*2.20462;
+
+        //2.)
+        var firstname=prompt("Enter your first name (no spaces!): ");
+        var lastname=prompt("Enter your last name (no spaces!): ");
+        var birthyear=prompt("Enter your birth year: ");
+
+        birthyear=2024-birthyear;
+
+        document.getElementById("message").innerHTML= "Hello " + firstname + " " + lastname +"! " + "How does it feel to be " + birthyear + " years old?";
+
+        //3.) 
+        function confirmation(){
+            var txt;
+            if (confirm("Do you agree to share your personal information with the site? ")) {
+                txt=alert(
+                    "Name: " + nickname + nextline + 
+                    "Height: " + Math.trunc(feet) + "'" + inches + "" + nextline +
+                    "Weight: " + lbs + " lbs");
+            } else {
+                txt=alert("User does not wish to share hisher information")
+            }
+        }
+    </script>
+</body>
+</html>
